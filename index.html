@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <script>
+  // Redirect only if user is NOT logged in
+  if (!localStorage.getItem("creamery_logged_in")) {
+      window.location.href = "login.html";
+  }
+</script>
+
     <!-- NAV -->
     <header class="navbar">
       <div class="container navbar-inner">
@@ -186,6 +193,7 @@
     <script src="script.js"></script>
   </body>
 </html>
+
 
 
 

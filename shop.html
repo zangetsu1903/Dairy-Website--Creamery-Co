@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Creamery&Co. – Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <header class="navbar">
+      <div class="container navbar-inner">
+        <a href="index.html" class="logo">
+          <span>Creamery</span><span>&Co.</span>
+        </a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="shop.html" class="active">Shop</a>
+          <a href="farm.html">The Farm</a>
+          <a href="story.html">Our Story</a>
+          <a href="recipes.html">Recipes</a>
+          <a href="delivery.html">Delivery</a>
+          <a href="contact.html">Contact</a>
+          <a href="login.html">Login</a>
+          <div class="cart-icon">
+            🛒 <span id="cart-count" class="cart-badge">0</span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- SHOP -->
+    <main class="section">
+      <div class="container">
+        <h1 class="section-title">Our Fresh Products</h1>
+        <p class="section-subtitle">
+          Add items to your cart – we’ll calculate the total automatically.
+        </p>
+
+        <div class="shop-layout">
+          <!-- Products -->
+          <div>
+            <div class="card-grid">
+              <article class="card">
+                <img src="images/milk.jpg" alt="Organic Whole Milk" />
+                <div class="card-body">
+                  <h3 class="product-title">Organic Whole Milk (1L)</h3>
+                  <p class="product-price">₹120 <span>/ bottle</span></p>
+                  <button
+                    class="btn btn-primary"
+                    onclick="addToCart('milk1','Organic Whole Milk (1L)',120)"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </article>
+
+              <article class="card">
+                <img src="images/cheese.jpg" alt="Aged Cheddar" />
+                <div class="card-body">
+                  <h3 class="product-title">Aged Cheddar (200g)</h3>
+                  <p class="product-price">₹499 <span>/ pack</span></p>
+                  <button
+                    class="btn btn-primary"
+                    onclick="addToCart('cheddar','Aged Cheddar (200g)',499)"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </article>
+
+              <article class="card">
+                <img src="images/yogurt.jpg" alt="Greek Yogurt" />
+                <div class="card-body">
+                  <h3 class="product-title">Greek Yogurt (500g)</h3>
+                  <p class="product-price">₹350 <span>/ tub</span></p>
+                  <button
+                    class="btn btn-primary"
+                    onclick="addToCart('yogurt','Greek Yogurt (500g)',350)"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </article>
+
+              <article class="card">
+                <img src="images/butter.jpg" alt="Salted Butter" />
+                <div class="card-body">
+                  <h3 class="product-title">Salted Butter (250g)</h3>
+                  <p class="product-price">₹399 <span>/ block</span></p>
+                  <button
+                    class="btn btn-primary"
+                    onclick="addToCart('butter','Salted Butter (250g)',399)"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Cart panel -->
+          <aside class="cart-panel">
+            <h3>Your Cart</h3>
+            <div class="cart-items"></div>
+            <div class="cart-total">
+              <span>Total</span>
+              <span id="cart-total">₹0</span>
+            </div>
+            <button class="btn btn-primary" type="button">
+              Checkout (demo)
+            </button>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">© 2025 Creamery&Co. All rights reserved.</div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

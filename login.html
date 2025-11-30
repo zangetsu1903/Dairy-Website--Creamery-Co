@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Creamery&Co. – Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="login-page">
+    <!-- NAV -->
+    <header class="navbar">
+      <div class="container navbar-inner">
+        <a href="index.html" class="logo">
+          <span>Creamery</span><span>&Co.</span>
+        </a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="farm.html">The Farm</a>
+          <a href="story.html">Our Story</a>
+          <a href="recipes.html">Recipes</a>
+          <a href="delivery.html">Delivery</a>
+          <a href="contact.html">Contact</a>
+          <a href="login.html" class="active">Login</a>
+
+          <div class="cart-icon" title="View Cart">
+            🛒 <span id="cart-count" class="cart-badge">0</span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- LOGIN CARD -->
+    <main class="section">
+      <div class="container auth-wrapper">
+        <div class="auth-card login-grid">
+
+          <!-- LEFT SIDE (FORM) -->
+          <div class="login-left">
+            <div class="auth-header">
+              <h1>Welcome back <span>👋</span></h1>
+              <p>
+                Log in to continue exploring farm-fresh dairy goodness from
+                Creamery &amp; Co.
+              </p>
+            </div>
+
+            <form id="loginForm">
+              <div class="form-group">
+                <label for="username">Email</label>
+                <input
+                  id="username"
+                  type="text"
+                  placeholder="demo@gmail.com"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                  id="password"
+                  type="password"
+                  placeholder="••••••••"
+                  required
+                />
+              </div>
+
+              <div class="auth-options">
+                <label>
+                  <input type="checkbox" id="remember" />
+                  Remember me
+                </label>
+                <a href="#">Forgot password?</a>
+              </div>
+
+              <button type="submit" class="btn btn-primary login-btn">
+                Log in →
+              </button>
+            </form>
+
+            <div class="demo-box">
+              <p><strong>Use these demo credentials:</strong></p>
+              <p>
+                Email: <span class="demo-email">Aman@123</span>
+                &nbsp;&nbsp;&nbsp;
+                Password: <span class="demo-pass">shubh123</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- RIGHT SIDE (GREEN INFO) -->
+          <div class="login-right">
+            <span class="login-pill">🌿 Farm Fresh • Local • Pure</span>
+
+            <h2>Fresh from our farm to your fridge.</h2>
+
+            <p>
+              Sign in to access personalised offers, saved recipes, and
+              fast-track delivery for your favourite Creamery &amp; Co. products.
+            </p>
+
+            <ul class="login-benefits">
+              <li>🚚 24h from milking to your door</li>
+              <li>🥛 100% preservative-free</li>
+              <li>⭐ 4.9★ customer rating</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">© 2025 Creamery&Co. All rights reserved.</div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+      document.getElementById("loginForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+        const user = document.getElementById("username").value.trim();
+        const pass = document.getElementById("password").value.trim();
+
+        // YOU CAN CHANGE TO YOUR REAL LOGIN CREDENTIALS
+        if (user === "Aman@123" && pass === "shubh123") {
+          alert("Login successful!");
+          localStorage.setItem("creamery_logged_in", "true");
+          window.location.href = "index.html";
+        } else {
+          alert("Wrong username or password.");
+        }
+      });
+    </script>
+  </body>
+</html>

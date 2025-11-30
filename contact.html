@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Creamery&Co. – Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <header class="navbar">
+      <div class="container navbar-inner">
+        <a href="index.html" class="logo">
+          <span>Creamery</span><span>&Co.</span>
+        </a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="farm.html">The Farm</a>
+          <a href="story.html">Our Story</a>
+          <a href="recipes.html">Recipes</a>
+          <a href="delivery.html">Delivery</a>
+          <a href="contact.html" class="active">Contact</a>
+          <a href="login.html">Login</a>
+          <div class="cart-icon">
+            🛒 <span id="cart-count" class="cart-badge">0</span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <h1 class="section-title">Get in Touch</h1>
+        <p class="section-subtitle">
+          Have questions about your order or subscription? We’re here to help.
+        </p>
+
+        <div class="contact-layout">
+          <form>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input id="name" type="text" placeholder="Your Name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                id="email"
+                type="email"
+                placeholder="email@example.com"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                placeholder="How can we help?"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+
+          <div>
+            <h3>Visit the Farm</h3>
+            <p>123 Dairy Lane, Connaught Place<br />New Delhi, 110001</p>
+
+            <h3 style="margin-top: 1.4rem">Call Us</h3>
+            <p>(555) 123-4567</p>
+
+            <h3 style="margin-top: 1.4rem">Email</h3>
+            <p>hello@creameryandco.com</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">© 2025 Creamery&Co. All rights reserved.</div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
